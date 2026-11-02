@@ -1,96 +1,762 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex, nofollow">
-<title>Website Temporarily Unavailable</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mabati Roofing Supplies Kenya | Roofing Sheets & Mabati Prices</title>
+<meta name="description" content="Shop roofing sheets from Mabati Roofing Supplies. Browse corrugated, versatile, box profile and reject mabati, calculate your order and order directly through WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f6f5f2;--card:#ffffff;--fg:#1f1e1b;--mut:#66645e;--bd:#e4e2dc;
-  --acc:#c77d00;--accbg:#fff3d9;--accfg:#7a4b00;
+  --navy:#0D1B3D;--navy-deep:#08152F;--red:#C62828;--red-2:#E53935;
+  --ink:#0D1B3D;--muted:#5b6478;--line:#e7e9ee;--bg-soft:#f6f7fa;--gold:#e0a52c;
   box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
 }
-@media (prefers-color-scheme:dark){
-  :root{--bg:#141413;--card:#1f1f1d;--fg:#f2f1ed;--mut:#a09e97;--bd:#33322e;--acc:#f0a830;--accbg:#2e2410;--accfg:#f6c66b}
-}
-*,*::before,*::after{box-sizing:border-box}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 html,body{height:100%}
-body{
-  margin:0;background:var(--bg);color:var(--fg);
-  font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  display:flex;align-items:center;justify-content:center;padding:24px 16px;
-  -webkit-font-smoothing:antialiased;
-}
-main{
-  width:100%;max-width:620px;background:var(--card);
-  border:1px solid var(--bd);border-radius:20px;
-  padding:44px 40px 36px;box-shadow:0 10px 40px rgba(0,0,0,.06);
-}
-.badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--accbg);color:var(--accfg);
-  font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
-  padding:6px 12px;border-radius:999px;margin-bottom:22px;
-}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--acc)}
-h1{font-size:30px;line-height:1.2;margin:0 0 6px;letter-spacing:-.01em}
-.sub{font-size:18px;font-weight:600;color:var(--acc);margin:0 0 20px}
-p{margin:0 0 14px;color:var(--mut)}
-p.lead{color:var(--fg)}
-hr{border:0;border-top:1px solid var(--bd);margin:28px 0}
-h2{font-size:17px;margin:0 0 14px}
-ol{margin:0;padding:0;list-style:none;counter-reset:s}
-ol li{
-  counter-increment:s;position:relative;padding-left:42px;margin-bottom:14px;color:var(--mut);
-}
-ol li::before{
-  content:counter(s);position:absolute;left:0;top:1px;
-  width:28px;height:28px;border-radius:50%;
-  background:var(--accbg);color:var(--accfg);
-  font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;
-}
-.help{
-  background:var(--bg);border:1px solid var(--bd);border-radius:14px;
-  padding:18px 20px;margin-top:6px;
-}
-.help h3{font-size:15px;margin:0 0 6px}
-.help p{margin:0;font-size:15px}
-.thanks{margin:26px 0 0;text-align:center;font-size:15px}
-.thanks strong{color:var(--fg);font-weight:600}
-@media (max-width:520px){
-  main{padding:32px 22px 28px;border-radius:16px}
-  h1{font-size:25px}
-  .sub{font-size:16px}
-}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.5}
+h1,h2,h3,h4{font-family:Manrope,Inter,sans-serif;font-weight:800;letter-spacing:-.02em}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:8px;font-weight:600;font-size:14.5px;cursor:pointer;border:1px solid transparent;transition:.15s}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:var(--red-2)}
+.btn-outline{background:#fff;color:var(--navy);border-color:var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{background:var(--navy-deep)}
+.btn-wa{background:#1f9e50;color:#fff}
+.btn-wa:hover{background:#1a8544}
+section{padding:64px 0}
+.eyebrow{color:var(--red);font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
+.center{text-align:center}
+.muted{color:var(--muted)}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.hbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1200px;margin:0 auto;gap:16px}
+.logo{font-family:Manrope;font-weight:800;font-size:18px;color:var(--navy);white-space:nowrap}
+nav.main{display:flex;gap:22px;font-weight:600;font-size:14.5px}
+nav.main a:hover{color:var(--red)}
+.hicons{display:flex;align-items:center;gap:16px}
+.icon-btn{position:relative;background:none;border:none;cursor:pointer;color:var(--navy);font-size:19px;padding:4px}
+.badge{position:absolute;top:-4px;right:-6px;background:var(--red);color:#fff;font-size:10.5px;font-weight:700;border-radius:999px;min-width:17px;height:17px;display:flex;align-items:center;justify-content:center;padding:0 4px}
+#searchInput{border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;width:150px;display:none}
+@media(min-width:820px){#searchInput{display:inline-block}}
+.mobnav{display:none}
+@media(max-width:819px){nav.main{display:none}}
+
+/* hero */
+.hero{position:relative;color:#fff;background:linear-gradient(180deg,rgba(8,21,47,.72),rgba(8,21,47,.86)),url('https://res.cloudinary.com/hztm3zo8/image/upload/v1788929731/703472558843421fe960ca155add7a11_cwljjw.jpg') center/cover;padding:100px 0 90px}
+.hero h1{font-size:clamp(30px,5vw,50px);margin:12px 0 14px;line-height:1.08}
+.hero p{max-width:560px;color:#dbe0ee;font-size:16px;margin-bottom:26px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.hero .contact{font-size:14px;color:#c8cede}
+
+/* trust strip */
+.trust{background:var(--bg-soft);border-bottom:1px solid var(--line);border-top:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:26px 20px}
+@media(min-width:760px){.trust .wrap{grid-template-columns:repeat(4,1fr)}}
+.trust .tcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:0 1px 2px rgba(13,27,61,.06)}
+.trust h4{font-size:13.5px;color:var(--navy)}
+.trust p{font-size:12.5px;color:var(--muted);margin-top:4px}
+.icon-badge{width:42px;height:42px;border-radius:10px;background:#fdecea;color:var(--red);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.icon-badge svg{width:22px;height:22px}
+
+/* store controls */
+.storehead{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:22px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer;color:var(--navy)}
+.chip.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.arealist{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:22px 0}
+.areapill{background:#fff;border:1px solid #dde1ea;border-radius:999px;padding:9px 18px;font-size:13.5px;font-weight:600;color:var(--navy);box-shadow:0 1px 3px rgba(13,27,61,.06)}
+.logoimg{height:34px;width:auto}
+.logo{display:flex;align-items:center;gap:10px}
+footer .flogo{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+footer .flogo img{height:30px}
+
+/* factory + gallery */
+.section-tag{color:var(--red);font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
+.factory .wrap{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+@media(min-width:900px){.factory .wrap{grid-template-columns:1fr 1.1fr}}
+.factory-head h2{font-size:clamp(24px,3.4vw,34px);margin:10px 0 14px}
+.factory-images{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.factory-images img{width:100%;height:100%;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+.factory-images .fi-main{grid-column:1/-1;aspect-ratio:16/9}
+.factory-images img:not(.fi-main){aspect-ratio:4/3}
+.section-head{margin-bottom:26px}
+.section-head h2{font-size:clamp(24px,3.4vw,32px);margin-top:10px}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.gallery-card{border:1px solid #dde1ea;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 2px 6px rgba(13,27,61,.07)}
+.gallery-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.gallery-caption{padding:14px 16px}
+.gallery-caption h3{font-size:15px;margin-bottom:4px}
+.gallery-caption p{font-size:13px;color:var(--muted)}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+select{border:1px solid var(--line);border-radius:8px;padding:9px 12px;font-size:13.5px;background:#fff}
+
+/* product grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+.card{border:1px solid #dde1ea;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column;box-shadow:0 2px 6px rgba(13,27,61,.07)}
+.card .imgwrap{aspect-ratio:4/3;background:var(--bg-soft);overflow:hidden}
+.card .imgwrap img{width:100%;height:100%;object-fit:cover}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cat{font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.05em}
+.card h3{font-size:16px}
+.card .desc{font-size:13px;color:var(--muted);flex:1}
+.price{font-weight:800;color:var(--navy);font-size:15.5px}
+.sizes{font-size:12px;color:var(--muted)}
+.cardbtns{display:flex;gap:8px;margin-top:8px}
+.cardbtns .btn{flex:1;padding:9px 8px;font-size:13px}
+
+/* cart drawer */
+.overlay{position:fixed;inset:0;background:rgba(8,15,30,.5);z-index:90;display:none}
+.overlay.show{display:block}
+.drawer{position:fixed;top:0;right:0;height:100%;width:380px;max-width:92vw;background:#fff;z-index:91;transform:translateX(100%);transition:.25s;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.drawer.show{transform:translateX(0)}
+.dhead{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+.ditems{flex:1;overflow-y:auto;padding:12px 20px}
+.citem{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
+.citem img{width:56px;height:56px;object-fit:cover;border-radius:6px;background:var(--bg-soft)}
+.qty{display:flex;align-items:center;gap:8px;margin-top:6px}
+.qty button{width:24px;height:24px;border:1px solid var(--line);background:#fff;border-radius:5px;cursor:pointer}
+.dfoot{border-top:1px solid var(--line);padding:16px 20px}
+.row{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px}
+
+/* about/why/how */
+.bg-soft{background:var(--bg-soft)}
+.iconlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:30px}
+.iconlist .it{background:#fff;border:1px solid #dde1ea;border-radius:12px;padding:20px;box-shadow:0 2px 6px rgba(13,27,61,.06)}
+.iconlist h4{font-size:15px;margin-bottom:6px}
+.iconlist p{font-size:13.5px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;margin-top:30px}
+.step .n{font-family:Manrope;font-weight:800;color:var(--red);font-size:22px}
+.step h4{font-size:14.5px;margin:6px 0 4px}
+.step p{font-size:13px;color:var(--muted)}
+
+/* reviews */
+.rev{background:#fff;border:1px solid #dde1ea;border-radius:12px;padding:20px;box-shadow:0 2px 6px rgba(13,27,61,.06)}
+.stars{color:var(--gold);letter-spacing:2px;margin-bottom:8px}
+
+/* faq */
+.faqitem{border-bottom:1px solid var(--line);padding:16px 0}
+.faqq{display:flex;justify-content:space-between;cursor:pointer;font-weight:600;font-size:15px}
+.faqa{max-height:0;overflow:hidden;color:var(--muted);font-size:14px;transition:.2s}
+.faqitem.open .faqa{max-height:200px;margin-top:8px}
+
+/* forms */
+.form-card{background:#fff;border:1px solid #dde1ea;border-radius:14px;padding:26px;max-width:640px;margin:30px auto 0;box-shadow:0 4px 14px rgba(13,27,61,.08)}
+.form-card label{display:block;font-size:13px;font-weight:600;margin:12px 0 5px}
+.form-card input,.form-card select,.form-card textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:14px;font-family:inherit}
+
+/* final cta */
+.finalcta{background:var(--navy);color:#fff;text-align:center;border-radius:16px;padding:50px 24px;margin:0 20px}
+.finalcta h2{color:#fff}
+.finalcta .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+
+footer{background:var(--navy-deep);color:#cdd3e2;padding:50px 0 24px;margin-top:60px}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px}
+footer h4{color:#fff;font-size:14px;margin-bottom:12px}
+footer a{font-size:13.5px;color:#cdd3e2;display:block;margin-bottom:8px}
+footer a:hover{color:#fff}
+.fbottom{text-align:center;font-size:12.5px;color:#8b93ab;margin-top:34px;border-top:1px solid #1c2a4d;padding-top:18px}
+
+/* product detail */
+#productView{display:none}
+.pd-grid{display:grid;grid-template-columns:1fr;gap:32px}
+@media(min-width:860px){.pd-grid{grid-template-columns:1fr 1fr}}
+.pd-img{aspect-ratio:1/1;background:var(--bg-soft);border-radius:12px;overflow:hidden}
+.pd-img img{width:100%;height:100%;object-fit:cover}
+.opt-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 16px}
+.optcard{border:1px solid var(--line);border-radius:8px;padding:10px 14px;cursor:pointer;font-size:13.5px;font-weight:600}
+.optcard.sel{border-color:var(--red);background:#fdecea;color:var(--red)}
+.colorcard{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;font-size:13.5px;font-weight:600}
+.colorcard.sel{border-color:var(--navy);background:var(--bg-soft)}
+.swatch{width:16px;height:16px;border-radius:50%;border:1px solid rgba(0,0,0,.15)}
+.breadcrumb{font-size:13px;color:var(--muted);margin-bottom:16px}
+.backlink{display:inline-block;margin-top:6px;font-size:13.5px;font-weight:600;color:var(--red)}
+
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg-soft:#f6f7fa}}
+body{background:#fff}
 </style>
 </head>
 <body>
-<main>
 
-  <h1>Your Hosting Subscription Has Expired</h1>
-  <p class="sub">This website is currently offline</p>
-
-  <p class="lead">This website is currently unavailable because its hosting subscription has expired.</p>
-  <p>To restore your website and make it accessible to your visitors again, please renew your hosting subscription.</p>
-
-  <hr>
-
-  <h2>How to Restore Your Website</h2>
-  <ol>
-    <li>Contact your hosting provider to confirm your renewal details.</li>
-    <li>Complete the required renewal payment.</li>
-    <li>Allow time for your hosting service to be restored.</li>
-  </ol>
-
-  <div class="help">
-    <h3>Need assistance?</h3>
-    <p>Please contact your website administrator or hosting provider for renewal assistance.</p>
+<header>
+  <div class="hbar">
+    <a href="#/" class="logo"><img class="logoimg" src="https://res.cloudinary.com/hztm3zo8/image/upload/v1790398018/Polish_20260926_074341360_r2wboz.png" alt="Mabati Roofing Supplies logo">Mabati Roofing Supplies</a>
+    <nav class="main">
+      <a href="#/">Home</a><a href="#store">Shop</a><a href="#store">Roofing Sheets</a>
+      <a href="#store">Accessories</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="hicons">
+      <input id="searchInput" placeholder="Search roofing products..." oninput="onSearch(this.value)">
+      <button class="icon-btn" onclick="openCart()" title="Cart"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1.4"/><circle cx="18" cy="21" r="1.4"/><path d="M2 3h2l2.4 12.2a2 2 0 0 0 2 1.8h8.7a2 2 0 0 0 2-1.6L21 7H6"/></svg><span class="badge" id="cartBadge">0</span></button>
+    </div>
   </div>
+</header>
 
-  <p class="thanks">We appreciate your understanding and look forward to having this website back online soon.<br><strong>Thank you for your patience.</strong></p>
+<main id="homeView">
+<section class="hero">
+  <div class="wrap">
+                <div class="eyebrow" style="color:#f2a6a1">FOR ALL YOUR ROOFING NEEDS</div>
+    <h1>Strong Roofs.<br>Stronger Homes.</h1>
+    <p>Quality roofing sheets, roofing accessories and building materials at competitive prices, with reliable delivery across Kenya.</p>
+    <div class="cta">
+      <a href="#store" class="btn btn-primary">Shop Roofing Sheets</a>
+      <a href="#quote" class="btn" style="background:#fff;color:var(--navy)">Get a Quote</a>
+    </div>
+    <div class="contact">Call / WhatsApp <strong style="color:#fff">0739 706 047</strong></div>
+  </div>
+</section>
+
+<section class="trust" style="padding:0">
+  <div class="wrap">
+    <div class="tcard"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>QUALITY PRODUCTS</h4><p>Durable roofing solutions</p></div>
+    <div class="tcard"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3 3 0 0 0 0 6h5a3 3 0 0 1 0 6H6"/></svg></div><h4>COMPETITIVE PRICES</h4><p>Affordable options for different budgets</p></div>
+    <div class="tcard"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h18M3 12h18M3 17h18"/><path d="M6 7v10M18 7v10"/></svg></div><h4>CUSTOM LENGTHS</h4><p>Sheets cut to required lengths where available</p></div>
+    <div class="tcard"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 16V7a1 1 0 0 1 1-1h9v10"/><path d="M13 10h4l3 3v3h-7z"/><circle cx="7.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg></div><h4>RELIABLE DELIVERY</h4><p>Delivery across Kenya</p></div>
+  </div>
+</section>
+
+<section id="store">
+  <div class="wrap">
+    <h2>Shop Roofing Materials</h2>
+    <p class="muted" style="margin:8px 0 26px">Browse our available roofing products, compare options and add what you need to your cart.</p>
+    <div class="storehead">
+      <div class="filters" id="filterBar"></div>
+      <select id="sortSel" onchange="renderGrid()">
+        <option value="featured">Sort: Featured</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+        <option value="az">Name: A-Z</option>
+      </select>
+    </div>
+    <div class="grid" id="productGrid"></div>
+  </div>
+</section>
+
+<section class="bg-soft" id="about">
+  <div class="wrap">
+    <div class="eyebrow">ABOUT MABATI ROOFING SUPPLIES</div>
+    <h2 style="margin:10px 0 14px">A Practical Roofing Partner for Your Next Project</h2>
+    <p class="muted" style="max-width:680px">Mabati Roofing Supplies supplies roofing sheets, roofing accessories and selected building materials for residential, commercial and industrial construction projects. We focus on providing practical roofing solutions at competitive prices while keeping the buying process simple. Customers can browse available products, compare options, calculate quantities and send their orders directly to our WhatsApp team.</p>
+    <div class="iconlist">
+      <div class="it"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-7 9 7"/><path d="M5 10v9h14v-9"/></svg></div><h4>Roofing Sheets</h4><p>Corrugated, box profile, versatile and selected reject roofing options.</p></div>
+      <div class="it"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a3 3 0 1 1 3 3L9 18l-4.5 1.5L6 15z"/></svg></div><h4>Roofing Accessories</h4><p>Supporting products for completing roofing projects.</p></div>
+      <div class="it"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h18M3 12h18M3 17h18"/><path d="M6 7v10M18 7v10"/></svg></div><h4>Custom Roofing Solutions</h4><p>Roofing sheets cut to required lengths where available.</p></div>
+      <div class="it"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div><h4>Building Materials</h4><p>Selected materials for residential, commercial and industrial construction.</p></div>
+      <div class="it"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 16V7a1 1 0 0 1 1-1h9v10"/><path d="M13 10h4l3 3v3h-7z"/><circle cx="7.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg></div><h4>Delivery</h4><p>Reliable delivery arrangements across Kenya.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FACTORY ================= -->
+<section class="factory">
+  <div class="wrap">
+    <div class="factory-head reveal">
+      <span class="section-tag">FROM FACTORY TO SITE</span>
+      <h2>From manufacturing to your building site.</h2>
+      <p class="muted">Behind every Mabati Roofing Supplies product is a commitment to quality, efficiency, and customer satisfaction. Our manufacturing and supply process ensures every customer receives reliable roofing materials ready for their construction needs.</p>
+    </div>
+    <div class="factory-images reveal">
+      <img class="fi-main" src="https://res.cloudinary.com/hztm3zo8/image/upload/v1788932975/a2d8f1843c38812cb80631a0ecd7761e_q5z5ym.jpg" alt="Mabati manufacturing machine" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1565374843795-3f4b81b4f76a?w=900&q=80'">
+      <img src="https://res.cloudinary.com/hztm3zo8/image/upload/v1788933080/8d0ddb84744ae17172cc6f6b41e5784e_crqxjh.jpg" alt="Mabati Roofing Supplies factory team" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80'">
+      <img src="https://res.cloudinary.com/hztm3zo8/image/upload/v1788933054/680acc10ff0b8d54a971838c300224b2_d8izzt.jpg" alt="Loading mabati for delivery" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1580901369725-89d872142a97?w=600&q=80'">
+    </div>
+  </div>
+</section>
+<!-- REPLACE IMAGE: mtaaniweb/mabati-roofing-supplies/factory-machine.jpg, factory-team.jpg, factory-loading.jpg -->
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-tag">OUR PROJECTS</span>
+      <h2>Roofs built with Mabati Roofing quality.</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-card reveal">
+        <img src="https://res.cloudinary.com/hztm3zo8/image/upload/v1788931100/ee62902f68b9137acea9a382f05320ff_ol63kw.jpg" alt="Modern residential home roofing" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80'">
+        <div class="gallery-caption">
+          <h3>Modern Residential Home</h3>
+          <p>Premium roofing solution supplied for a contemporary family home.</p>
+        </div>
+      </div>
+      <div class="gallery-card reveal">
+        <img src="https://res.cloudinary.com/hztm3zo8/image/upload/v1788931150/24276ab75046a08fe32c14881eaf249a_mqnqqp.jpg" alt="Commercial building roofing project" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80'">
+        <div class="gallery-caption">
+          <h3>Commercial Building Project</h3>
+          <p>Durable roofing supplied for a commercial development.</p>
+        </div>
+      </div>
+      <div class="gallery-card reveal">
+        <img src="https://res.cloudinary.com/hztm3zo8/image/upload/v1788930780/dea966701dede9c90a18016d23554ca9_tbaixt.jpg" alt="Contractor bulk supply project" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1541976590-713941681591?w=600&q=80'">
+        <div class="gallery-caption">
+          <h3>Contractor Supply Project</h3>
+          <p>Reliable bulk supply supporting construction professionals.</p>
+        </div>
+      </div>
+      <div class="gallery-card reveal">
+        <img src="https://res.cloudinary.com/hztm3zo8/image/upload/v1788931206/4eb952bc315a541a6f9c6f7572eea7e2_b4v2ne.jpg" alt="Rural home roofing project" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1595877244574-e90ce41ce089?w=600&q=80'">
+        <div class="gallery-caption">
+          <h3>Rural Home Roofing Project</h3>
+          <p>Affordable and durable roofing solution for homeowners.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">WHY CHOOSE US</div>
+    <h2 style="margin:10px 0">Built Around Easy Ordering</h2>
+    <div class="iconlist">
+      <div class="it"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3 3 0 0 0 0 6h5a3 3 0 0 1 0 6H6"/></svg></div><h4>Competitive Prices</h4><p>Practical roofing options at competitive prices.</p></div>
+      <div class="it"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div><h4>Product Variety</h4><p>Multiple roofing profiles and options for different project requirements.</p></div>
+      <div class="it"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h18M3 12h18M3 17h18"/><path d="M6 7v10M18 7v10"/></svg></div><h4>Custom Lengths</h4><p>Request roofing sheets according to your required measurements where available.</p></div>
+      <div class="it"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1.3"/><circle cx="17" cy="21" r="1.3"/><path d="M2 3h2l2.4 12.2a2 2 0 0 0 2 1.8h8.7a2 2 0 0 0 2-1.6L21 7H6"/></svg></div><h4>Easy Ordering</h4><p>Select your products, add them to your cart and send the complete order to WhatsApp.</p></div>
+      <div class="it"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20l1.4-4.2A8 8 0 1 1 9 19L4 20z"/></svg></div><h4>Reliable Support</h4><p>Get assistance with product availability, pricing and delivery.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">HOW IT WORKS</div>
+
+    <h2 style="margin:10px 0">From Browsing to Delivery</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h4>Browse</h4><p>Explore the roofing catalogue.</p></div>
+      <div class="step"><div class="n">02</div><h4>Choose</h4><p>Open a product page and select the required size and quantity.</p></div>
+      <div class="step"><div class="n">03</div><h4>Add to Cart</h4><p>Build your complete roofing order.</p></div>
+      <div class="step"><div class="n">04</div><h4>Review</h4><p>Check your products and automatically calculated totals.</p></div>
+      <div class="step"><div class="n">05</div><h4>WhatsApp</h4><p>Send the complete order to our team.</p></div>
+      <div class="step"><div class="n">06</div><h4>Confirm & Deliver</h4><p>We confirm availability, final pricing and delivery arrangements.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="quote" class="bg-soft">
+  <div class="wrap center">
+    <div class="eyebrow">REQUEST A QUOTE</div>
+    <h2 style="margin:10px 0">Planning a Larger Project?</h2>
+    <p class="muted">Tell us what you need and request a quotation.</p>
+    <form class="form-card" style="text-align:left" onsubmit="return sendQuote(event)">
+      <label>Full Name</label><input required id="qName">
+      <label>Phone Number</label><input required id="qPhone">
+      <label>Project Location</label><input id="qLoc">
+      <label>Project Type</label><input id="qType" placeholder="e.g. Residential roofing">
+      <label>Products Required</label><input id="qProducts">
+      <label>Estimated Quantity</label><input id="qQty">
+      <label>Required Length</label><input id="qLen">
+      <label>Additional Requirements</label><textarea id="qNotes" rows="3"></textarea>
+      <button class="btn btn-wa" style="width:100%;margin-top:18px" type="submit">Request Quote via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<section class="bg-soft">
+  <div class="wrap center">
+    <div class="eyebrow">SERVICE AREAS</div>
+    <h2 style="margin:10px 0">Supplying Roofing Materials Across Kenya</h2>
+    <div class="arealist">
+      <span class="areapill">Nairobi</span><span class="areapill">Ruiru</span><span class="areapill">Thika</span>
+      <span class="areapill">Juja</span><span class="areapill">Kiambu</span><span class="areapill">Kikuyu</span>
+      <span class="areapill">Limuru</span><span class="areapill">Athi River</span><span class="areapill">Machakos</span>
+      <span class="areapill">Naivasha</span><span class="areapill">Eldoret</span><span class="areapill">Kisumu</span>
+      <span class="areapill">Busia</span><span class="areapill">Mombasa & Coast</span>
+    </div>
+    <p class="muted" style="font-size:13px">Delivery availability and charges may vary depending on location, order size and product. Confirm delivery details with our team.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow center">REVIEWS</div>
+    <h2 class="center" style="margin:10px 0 26px">What Customers Say</h2>
+    <div class="iconlist">
+      <div class="rev"><div class="stars">★★★★★</div><strong>Collinz Kirui</strong><p class="muted" style="margin-top:6px">"Great job Mabati Roofing. Got my order within three days. Much grateful."</p></div>
+      <div class="rev"><div class="stars">★★★★★</div><strong>Patrick Mutua</strong><p class="muted" style="margin-top:6px">"Saa hii price imeshuka mbaya. I ordered mine and it was delivered the same day. Mabati Roofing the best of all."</p></div>
+      <div class="rev"><div class="stars">★★★★★</div><strong>Chepkorir Ronoh</strong><p class="muted" style="margin-top:6px">"Mabati Roofing, I appreciate your service. My order was delivered in three days. Thank you so much."</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-soft">
+  <div class="wrap" style="max-width:760px">
+    <div class="eyebrow">FAQ</div>
+    <h2 style="margin:10px 0 20px">Frequently Asked Questions</h2>
+    <div id="faqList"></div>
+  </div>
+</section>
+
+<section>
+  <div class="finalcta wrap">
+    <h2>Ready to Sort Out Your Roofing?</h2>
+    <p style="color:#c8cede;margin-top:8px">Browse our products, build your order and send it directly to our WhatsApp team.</p>
+    <div class="cta">
+      <a href="#store" class="btn btn-primary">Shop Roofing Products</a>
+      <a href="https://wa.me/254739706047" target="_blank" class="btn btn-wa">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
 </main>
+
+<main id="productView">
+  <div class="wrap" style="padding:40px 20px">
+    <div class="breadcrumb"><a href="#/">Home</a> / <a href="#store">Shop</a> / <span id="pdCrumb"></span></div>
+    <div class="pd-grid">
+      <div class="pd-img"><img id="pdImg" alt=""></div>
+      <div>
+        <div class="cat" id="pdCat"></div>
+        <h1 id="pdName" style="font-size:28px;margin:6px 0 10px"></h1>
+        <p class="muted" id="pdDesc"></p>
+        <div class="price" id="pdPrice" style="font-size:22px;margin:14px 0 4px"></div>
+        <div id="pdLenWrap">
+          <div class="muted" style="font-size:13px;margin-top:10px">Length (metres, min 1m)</div>
+          <div class="opt-row" id="pdLenChips"></div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+            <button onclick="pdLenStep(-0.5)" style="width:30px;height:30px;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:pointer">−</button>
+            <input id="pdLenInput" type="number" min="1" step="0.5" value="2" style="width:80px;text-align:center;border:1px solid var(--line);border-radius:6px;padding:6px" onchange="pdLenChange(this.value)">
+            <span class="muted" style="font-size:13px">metres</span>
+            <button onclick="pdLenStep(0.5)" style="width:30px;height:30px;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:pointer">+</button>
+          </div>
+        </div>
+        <div id="pdColorWrap">
+          <div class="muted" style="font-size:13px;margin-top:4px">Select Colour</div>
+          <div class="opt-row" id="pdColors"></div>
+        </div>
+        <div class="qty"><button onclick="pdQty(-1)">−</button><span id="pdQty">1</span><button onclick="pdQty(1)">+</button></div>
+        <div class="row" style="margin-top:16px;font-weight:700"><span>Estimated Total</span><span id="pdTotal">-</span></div>
+        <div class="cta" style="margin-top:14px">
+          <button class="btn btn-dark" onclick="pdAddToCart()">Add to Cart</button>
+          <button class="btn btn-wa" onclick="pdOrderWhatsapp()">Order via WhatsApp</button>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:50px">
+      <h3 style="margin-bottom:14px">Related Products</h3>
+      <div class="grid" id="pdRelated"></div>
+    </div>
+  </div>
+</main>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<div class="drawer" id="drawer">
+  <div class="dhead"><h3>Your Cart</h3><button class="icon-btn" onclick="closeCart()">✕</button></div>
+  <div class="ditems" id="cartItems"></div>
+  <div class="dfoot">
+    <div class="row"><span>Subtotal</span><span id="cartSubtotal">KES 0</span></div>
+    <div class="row muted"><span>Delivery</span><span>Confirmed on WhatsApp</span></div>
+    <div class="row" style="font-weight:800;font-size:16px"><span>Estimated Order Total</span><span id="cartTotal">KES 0</span></div>
+    <button class="btn btn-wa" style="width:100%;margin-top:10px" onclick="openCheckout()">Order via WhatsApp</button>
+  </div>
+</div>
+
+<div class="overlay" id="overlay2" onclick="closeCheckout()"></div>
+<div class="drawer" id="checkoutDrawer">
+  <div class="dhead"><h3>Checkout Details</h3><button class="icon-btn" onclick="closeCheckout()">✕</button></div>
+  <div class="ditems">
+    <label style="font-size:13px;font-weight:600;display:block;margin:10px 0 5px">Full Name</label>
+    <input id="coName" style="width:100%;border:1px solid var(--line);border-radius:8px;padding:10px">
+    <label style="font-size:13px;font-weight:600;display:block;margin:12px 0 5px">Phone Number</label>
+    <input id="coPhone" style="width:100%;border:1px solid var(--line);border-radius:8px;padding:10px">
+    <label style="font-size:13px;font-weight:600;display:block;margin:12px 0 5px">Delivery Location</label>
+    <input id="coLoc" style="width:100%;border:1px solid var(--line);border-radius:8px;padding:10px">
+    <label style="font-size:13px;font-weight:600;display:block;margin:12px 0 5px">Additional Notes</label>
+    <textarea id="coNotes" rows="3" style="width:100%;border:1px solid var(--line);border-radius:8px;padding:10px"></textarea>
+  </div>
+  <div class="dfoot"><button class="btn btn-wa" style="width:100%" onclick="sendCartWhatsapp()">Send Order to WhatsApp</button></div>
+</div>
+
+<footer>
+  <div class="wrap fgrid">
+    <div>
+      <div class="flogo"><img src="https://res.cloudinary.com/hztm3zo8/image/upload/v1790398018/Polish_20260926_074341360_r2wboz.png" alt="Mabati Roofing Supplies logo"><span class="logo" style="color:#fff">Mabati Roofing Supplies</span></div>
+      <p style="font-size:13px;margin:10px 0">Strong Roofs. Stronger Homes.</p>
+      <p style="font-size:13px">Quality roofing sheets, roofing accessories and building materials at competitive prices.</p>
+    </div>
+    <div><h4>Shop</h4><a href="#corrugated-mabati">Corrugated Mabati</a><a href="#versatile-mabati">Versatile Mabati</a><a href="#box-profile-mabati">Box Profile Mabati</a><a href="#reject-ordinary">Reject Mabati</a><a href="#store">Roofing Accessories</a></div>
+    <div><h4>Company</h4><a href="#about">About Us</a><a href="#/">How It Works</a><a href="#quote">Request a Quote</a><a href="#faq">FAQs</a></div>
+  </div>
+  <div class="fbottom">© 2026 Mabati Roofing Supplies. All rights reserved. · Powered by MtaaniWeb</div>
+</footer>
+
+<script>
+const COLORS=[
+ {name:'Traffic Red',hex:'#B72A2A'},{name:'Forest Green',hex:'#1E4D3C'},
+ {name:'Royal Blue',hex:'#1B3F8B'},{name:'Ash Grey',hex:'#8A8D93'},
+ {name:'Ivory',hex:'#EDE6D6'},{name:'Charcoal',hex:'#2B2B2E'}
+];
+const products=[
+ {id:'corrugated-mabati',name:'Corrugated Mabati',category:'Corrugated',
+  image:'https://res.cloudinary.com/hztm3zo8/image/upload/v1789824198/images_9_pi3bs2.jpg',
+  fallback:'',
+  desc:'A practical and versatile roofing option suitable for residential, commercial, agricultural and other construction applications.',
+  from:350,colors:COLORS},
+ {id:'versatile-mabati',name:'Versatile Mabati',category:'Versatile',
+  image:'https://res.cloudinary.com/hztm3zo8/image/upload/v1789824330/Versatile-Tile-Red-Matt-30-Gauge-1-1_z9tjhm.jpg',
+  fallback:'',
+  desc:'A versatile roofing profile suited to a range of residential and commercial projects.',
+  from:550,colors:COLORS},
+ {id:'ordinary-mabati',name:'Ordinary New Mabati',category:'Ordinary',
+  image:'https://res.cloudinary.com/hztm3zo8/image/upload/v1790413153/Fencing-Ironsheets_anhoml.jpg',
+  fallback:'',
+  desc:'Standard new ordinary mabati, a reliable everyday roofing option for residential and commercial buildings.',
+  from:300,colors:COLORS},
+ {id:'reject-ordinary',name:'Reject Ordinary Mabati',category:'Reject Mabati',
+  image:'https://res.cloudinary.com/hztm3zo8/image/upload/v1789824233/e26807_a8274aef2db048269835c2d91236f01a_mv2_p7faon.jpg',
+  fallback:'',
+  desc:'Budget-friendly reject ordinary mabati. Availability subject to current stock.',
+  from:150,colors:[{name:'Silver / Galvanized',hex:'#c7cad1'}]},
+ {id:'reject-coloured',name:'Reject Coloured Mabati',category:'Reject Mabati',
+  image:'https://res.cloudinary.com/hztm3zo8/image/upload/v1788930491/de215948b9295b4accce9bf438d64802_ekfwyy.jpg',
+  fallback:'',
+  desc:'Budget-friendly reject coloured mabati. Availability subject to current stock.',
+  from:150,colors:COLORS},
+ {id:'reject-box-profile',name:'Reject Box Profile Mabati',category:'Reject Mabati',
+  image:'https://res.cloudinary.com/hztm3zo8/image/upload/v1789372499/10e654dfd2de171a18eb33c78c877f66_1_mzfquu.jpg',
+  fallback:'',
+  desc:'Reject box profile roofing sheets. Availability subject to current stock.',
+  from:200,colors:COLORS},
+ {id:'reject-gauge30',name:'Reject Gauge 30 Box Profile',category:'Reject Mabati',
+  image:'https://res.cloudinary.com/hztm3zo8/image/upload/v1790400509/Box-Profile-914-Maroon-Matt-1.jpg_vgl2e1.webp',
+  fallback:'',
+  desc:'Reject Gauge 30 box profile mabati. Availability subject to current stock.',
+  from:200,colors:COLORS},
+ {id:'box-profile-mabati',name:'Box Profile Mabati',category:'Box Profile',
+  image:'https://res.cloudinary.com/hztm3zo8/image/upload/v1789823697/Box-Profile-914-Charcoal-Grey-Matt-1.jpg_yrq9gw.webp',
+  fallback:'',
+  desc:'Durable box profile roofing sheets for residential and commercial roofs.',
+  from:null,colors:COLORS},
+ {id:'accessory-placeholder',name:'Roofing Accessories',category:'Accessories',
+  image:'https://res.cloudinary.com/hztm3zo8/image/upload/v1790398059/file_000000002ca882118d7ce2cf5aa39901_tso4dm.png',
+  fallback:'',
+  desc:'Roofing accessories catalogue: details and pricing coming soon.',
+  from:null,colors:[]}
+];
+const WA='254739706047';
+let cart=JSON.parse(localStorage.getItem('mrs_cart')||'[]');
+let pdState={product:null,colorIdx:0,length:2,qty:1};
+
+function fmt(n){return n==null?'Contact for Current Price':'KES '+Math.round(n).toLocaleString();}
+function priceLabel(p){return p.from==null?'Contact for Current Price':'From KES '+p.from.toLocaleString()+' / metre';}
+
+function saveCart(){localStorage.setItem('mrs_cart',JSON.stringify(cart));updateBadge();renderCartItems();}
+function updateBadge(){document.getElementById('cartBadge').textContent=cart.reduce((s,i)=>s+i.qty,0);}
+
+function productCard(p){
+  const lengthNote=p.from!=null?'Custom length from 1m':'Contact us';
+  const colorNote=p.colors&&p.colors.length>1?p.colors.length+' colours available':(p.colors&&p.colors.length===1?p.colors[0].name:'');
+  return `<div class="card">
+    <div class="imgwrap"><img src="${p.image}" alt="${p.name}" onerror="this.onerror=null;this.src='${p.fallback}'"></div>
+    <div class="body">
+      <div class="cat">${p.category}</div>
+      <h3>${p.name}</h3>
+      <div class="desc">${p.desc}</div>
+      <div class="price">${priceLabel(p)}</div>
+      <div class="sizes">${lengthNote}${colorNote?' &middot; '+colorNote:''}</div>
+      <div class="cardbtns">
+        <a href="#${p.id}" class="btn btn-outline">View Product</a>
+        <button class="btn btn-primary" onclick="quickAdd('${p.id}')">Add to Cart</button>
+      </div>
+    </div>
+  </div>`;
+}
+function quickAdd(id){
+  const p=products.find(x=>x.id===id);
+  if(p.from!=null||(p.colors&&p.colors.length>1)){location.hash='#'+id;return;}
+  addToCart(p,null,(p.colors&&p.colors[0])||null,1);
+  openCart();
+}
+function addToCart(p,length,color,qty){
+  const lenLabel=length?length+'m':'Standard';
+  const colorLabel=color?color.name:'Standard';
+  const key=p.id+'|'+lenLabel+'|'+colorLabel;
+  const existing=cart.find(c=>c.key===key);
+  const price=length?Math.round(p.from*length):(p.from||0);
+  if(existing){existing.qty+=qty;}
+  else cart.push({key,id:p.id,name:p.name,image:p.image,length:lenLabel,color:colorLabel,price,qty});
+  saveCart();
+}
+let currentFilter='All';
+function renderGrid(){
+  const q=(document.getElementById('searchInput').value||'').toLowerCase();
+  let list=products.filter(p=>currentFilter==='All'||p.category===currentFilter);
+  if(q)list=list.filter(p=>(p.name+p.category+p.desc).toLowerCase().includes(q));
+  const sort=document.getElementById('sortSel').value;
+  if(sort==='low')list=[...list].sort((a,b)=>(a.from||9e9)-(b.from||9e9));
+  if(sort==='high')list=[...list].sort((a,b)=>(b.from||0)-(a.from||0));
+  if(sort==='az')list=[...list].sort((a,b)=>a.name.localeCompare(b.name));
+  document.getElementById('productGrid').innerHTML=list.map(productCard).join('')||'<p class="muted">No products match your search.</p>';
+}
+function onSearch(){renderGrid();}
+function buildFilters(){
+  const cats=['All',...new Set(products.map(p=>p.category))];
+  document.getElementById('filterBar').innerHTML=cats.map(c=>
+    `<button class="chip ${c===currentFilter?'active':''}" onclick="setFilter('${c}')">${c}</button>`).join('');
+}
+function setFilter(c){currentFilter=c;buildFilters();renderGrid();}
+
+/* cart drawer */
+function openCart(){document.getElementById('drawer').classList.add('show');document.getElementById('overlay').classList.add('show');}
+function closeCart(){document.getElementById('drawer').classList.remove('show');document.getElementById('overlay').classList.remove('show');}
+function renderCartItems(){
+  const el=document.getElementById('cartItems');
+  if(!cart.length){el.innerHTML='<p class="muted">Your cart is empty.</p>';}
+  else el.innerHTML=cart.map((c,i)=>`
+    <div class="citem">
+      <img src="${c.image}" alt="" onerror="this.style.visibility='hidden'">
+      <div style="flex:1">
+        <div style="font-weight:600;font-size:14px">${c.name}</div>
+        <div class="muted" style="font-size:12.5px">${c.length}${c.color&&c.color!=='Standard'?' · '+c.color:''}</div>
+        <div class="qty"><button onclick="changeQty(${i},-1)">−</button><span>${c.qty}</span><button onclick="changeQty(${i},1)">+</button>
+          <span style="margin-left:auto;font-weight:700;font-size:13.5px">${fmt(c.price*c.qty)}</span>
+        </div>
+        <a style="font-size:12px;color:var(--red);cursor:pointer" onclick="removeItem(${i})">Remove</a>
+      </div>
+    </div>`).join('');
+  const subtotal=cart.reduce((s,c)=>s+c.price*c.qty,0);
+  document.getElementById('cartSubtotal').textContent=fmt(subtotal);
+  document.getElementById('cartTotal').textContent=fmt(subtotal);
+}
+function changeQty(i,d){cart[i].qty=Math.max(1,cart[i].qty+d);saveCart();}
+function removeItem(i){cart.splice(i,1);saveCart();}
+
+/* checkout */
+function openCheckout(){document.getElementById('checkoutDrawer').classList.add('show');document.getElementById('overlay2').classList.add('show');}
+function closeCheckout(){document.getElementById('checkoutDrawer').classList.remove('show');document.getElementById('overlay2').classList.remove('show');}
+function sendCartWhatsapp(){
+  if(!cart.length){alert('Your cart is empty.');return;}
+  const name=document.getElementById('coName').value, phone=document.getElementById('coPhone').value,
+        loc=document.getElementById('coLoc').value, notes=document.getElementById('coNotes').value;
+  let msg=`Hello Mabati Roofing Supplies,\n\nI would like to place an order:\n\n`;
+  cart.forEach((c,i)=>{msg+=`${i+1}. ${c.name}\n   Length: ${c.length}\n   Colour: ${c.color}\n   Quantity: ${c.qty}\n   Unit price: ${fmt(c.price)}\n   Subtotal: ${fmt(c.price*c.qty)}\n\n`;});
+  const total=cart.reduce((s,c)=>s+c.price*c.qty,0);
+  msg+=`Estimated order total: ${fmt(total)}\n`;
+  if(name)msg+=`\nCustomer: ${name}`;
+  if(phone)msg+=`\nPhone: ${phone}`;
+  if(loc)msg+=`\nDelivery Location: ${loc}`;
+  if(notes)msg+=`\nNotes: ${notes}`;
+  msg+=`\n\nPlease confirm availability and delivery details.`;
+  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank');
+}
+function sendQuote(e){
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value;
+  let msg=`Hello Mabati Roofing Supplies,\n\nI would like to request a quote:\n\n`+
+  `Name: ${v('qName')}\nPhone: ${v('qPhone')}\nProject Location: ${v('qLoc')}\nProject Type: ${v('qType')}\n`+
+  `Products Required: ${v('qProducts')}\nEstimated Quantity: ${v('qQty')}\nRequired Length: ${v('qLen')}\nAdditional Requirements: ${v('qNotes')}`;
+  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank');
+  return false;
+}
+
+/* product detail */
+function pdQty(d){pdState.qty=Math.max(1,pdState.qty+d);document.getElementById('pdQty').textContent=pdState.qty;pdUpdateTotal();}
+function pdLenStep(d){pdSetLength(pdState.length+d);}
+function pdLenChange(v){pdSetLength(parseFloat(v));}
+function pdSetLength(v){
+  pdState.length=Math.max(1,isNaN(v)?1:v);
+  document.getElementById('pdLenInput').value=pdState.length;
+  renderLenChips();pdUpdateTotal();
+}
+function pdSelectColor(i){pdState.colorIdx=i;renderColors();pdUpdateTotal();}
+function pdUpdateTotal(){
+  const p=pdState.product;
+  const unit=p.from!=null?Math.round(p.from*pdState.length):null;
+  document.getElementById('pdPrice').textContent=unit!=null?fmt(unit)+' / sheet':priceLabel(p);
+  document.getElementById('pdTotal').textContent=unit!=null?fmt(unit*pdState.qty):'Contact us';
+}
+function renderLenChips(){
+  const p=pdState.product;
+  if(p.from==null){document.getElementById('pdLenWrap').style.display='none';return;}
+  document.getElementById('pdLenWrap').style.display='block';
+  const presets=[1,2,2.5,3,4];
+  document.getElementById('pdLenChips').innerHTML=presets.map(l=>
+    `<div class="optcard ${l===pdState.length?'sel':''}" onclick="pdSetLength(${l})">${l}m</div>`).join('');
+}
+function renderColors(){
+  const p=pdState.product;
+  if(!p.colors||p.colors.length<1){document.getElementById('pdColorWrap').style.display='none';return;}
+  document.getElementById('pdColorWrap').style.display='block';
+  document.getElementById('pdColors').innerHTML=p.colors.map((c,i)=>
+    `<div class="colorcard ${i===pdState.colorIdx?'sel':''}" onclick="pdSelectColor(${i})"><span class="swatch" style="background:${c.hex}"></span>${c.name}</div>`).join('');
+}
+function pdAddToCart(){
+  const p=pdState.product;
+  const color=p.colors&&p.colors.length?p.colors[pdState.colorIdx]:null;
+  addToCart(p,p.from!=null?pdState.length:null,color,pdState.qty);
+  openCart();
+}
+function pdOrderWhatsapp(){
+  const p=pdState.product;
+  const color=p.colors&&p.colors.length?p.colors[pdState.colorIdx]:null;
+  const unit=p.from!=null?Math.round(p.from*pdState.length):null;
+  let msg=`Hello Mabati Roofing Supplies,\n\nI would like to order:\n\n${p.name}\nLength: ${p.from!=null?pdState.length+'m':'Standard'}\nColour: ${color?color.name:'Standard'}\nQuantity: ${pdState.qty}\n`+
+  (unit==null?'':`Unit price: ${fmt(unit)}\nEstimated total: ${fmt(unit*pdState.qty)}\n`)+
+  `\nPlease confirm availability and delivery details.`;
+  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank');
+}
+function loadProduct(id){
+  const p=products.find(x=>x.id===id);
+  if(!p){location.hash='#store';return;}
+  pdState={product:p,colorIdx:0,length:2,qty:1};
+  document.getElementById('pdCrumb').textContent=p.name;
+  document.getElementById('pdImg').src=p.image;document.getElementById('pdImg').alt=p.name;
+  document.getElementById('pdImg').onerror=function(){this.onerror=null;this.src=p.fallback;};
+  document.getElementById('pdCat').textContent=p.category;
+  document.getElementById('pdName').textContent=p.name;
+  document.getElementById('pdDesc').textContent=p.desc;
+  document.getElementById('pdQty').textContent=1;
+  document.getElementById('pdLenInput').value=2;
+  renderLenChips();renderColors();pdUpdateTotal();
+  document.title=p.name+' | Mabati Roofing Supplies Kenya';
+  const md=document.querySelector('meta[name="description"]');
+  if(md)md.setAttribute('content',p.desc);
+  const related=products.filter(x=>x.category===p.category&&x.id!==p.id).slice(0,4);
+  document.getElementById('pdRelated').innerHTML=related.map(productCard).join('')||'<p class="muted">No related products yet.</p>';
+  window.scrollTo(0,0);
+}
+
+/* routing */
+function route(){
+  const h=location.hash.replace(/^#/,'');
+  const p=products.find(x=>x.id===h);
+  if(p){document.getElementById('homeView').style.display='none';document.getElementById('productView').style.display='block';loadProduct(h);}
+  else{document.getElementById('productView').style.display='none';document.getElementById('homeView').style.display='block';}
+}
+window.addEventListener('hashchange',route);
+
+/* faq */
+const faqs=[
+ ['What types of mabati do you sell?','We supply corrugated, box profile, versatile and selected reject roofing sheets, together with roofing accessories and other building materials.'],
+ ['Can I order different products together?','Yes. Add multiple products to your cart and send the complete order to WhatsApp.'],
+ ['Can I select different lengths?','Yes. Product pages let you enter any length from 1 metre upward and the price updates automatically.'],
+ ['Can I order custom lengths?','Yes. Simply set your required length on the product page, from 1 metre upward, and add it to your cart.'],
+ ['How does ordering work?','Select your products, add them to your cart, review the calculated total and send your order directly to WhatsApp.'],
+ ['Do you accept online payments?','The website does not process online payments. Orders are confirmed through WhatsApp.'],
+ ['Do you offer delivery?','Yes. Delivery is available to selected locations, with free delivery available on qualifying orders.'],
+ ['Do you sell reject mabati?','Yes. Selected reject ordinary, coloured and box profile mabati are available depending on stock.'],
+ ['Can I get a quotation?','Yes. Use the quotation form for larger projects or custom requirements.']
+];
+document.getElementById('faqList').innerHTML=faqs.map((f,i)=>`
+  <div class="faqitem" id="faq${i}">
+    <div class="faqq" onclick="toggleFaq(${i})"><span>${f[0]}</span><span>+</span></div>
+    <div class="faqa">${f[1]}</div>
+  </div>`).join('');
+function toggleFaq(i){document.getElementById('faq'+i).classList.toggle('open');}
+
+buildFilters();renderGrid();updateBadge();renderCartItems();route();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
 </body>
 </html>
